@@ -291,7 +291,7 @@ def process_theme_step_uz(message):
         buttonB1 = types.KeyboardButton("Nusxasini yuborish")
         markup2.add(buttonA1).add(buttonB1)
         bot.send_message(message.chat.id,'Sizning tashkilotingiz: ' + str(user.org) + '\n Kimga: ' + str(user.sendorg) + '\n FISH: ' + str(user.sendfio) + '\n Mavzu: ' + str(user.theme),reply_markup=markup2)
-        f = open("test.docx","rb")
+        f = open("Шаблон ИП.docx","rb")
         bot.send_document(message.chat.id,f)
         #msg = bot.reply_to(message, 'Ведите тема писмы')
         #bot.register_next_step_handler(msg, process_theme_step)
@@ -357,7 +357,7 @@ def process_theme_step(message):
         buttonB1 = types.KeyboardButton("Отправить копию")
         markup2.add(buttonA1).add(buttonB1)
         bot.send_message(message.chat.id,'От: ' + str(user.org) + '\n Koму: ' + str(user.sendorg) + '\n ФИО получателя: ' + str(user.sendfio) + '\n Тема: ' + str(user.theme),reply_markup=markup2)
-        f = open("test.docx","rb")
+        f = open("Шаблон ИП.docx","rb")
 
         bot.send_document(message.chat.id,f)
         bot.send_message(message.chat.id,"Не забудьте загрузить копию письма.")
